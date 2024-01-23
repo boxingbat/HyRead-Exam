@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Book {
+struct Book: Codable {
     let uuid: Int
     let title: String
     let coverUrl: String
