@@ -22,6 +22,7 @@
 		0FCECE572B5FF90A00A0C71D /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE562B5FF90A00A0C71D /* BookList.swift */; };
 		0FCECE5A2B5FFA5A00A0C71D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE592B5FFA5A00A0C71D /* APIManager.swift */; };
 		0FCECE5C2B6004F700A0C71D /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE5B2B6004F700A0C71D /* BookCollectionViewCell.swift */; };
+		0FCECE602B60E5B200A0C71D /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE5F2B60E5B200A0C71D /* BooksViewModel.swift */; };
 		416A3BB52CC9BD0A0066AA2D /* Pods_HyReadExam_HyReadExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC766086CA63BB2EAB1EDE1 /* Pods_HyReadExam_HyReadExamUITests.framework */; };
 		A25B66A01DDDAF4840DB36E0 /* Pods_HyReadExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +64,7 @@
 		0FCECE562B5FF90A00A0C71D /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		0FCECE592B5FFA5A00A0C71D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		0FCECE5B2B6004F700A0C71D /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FCECE5F2B60E5B200A0C71D /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
 		1267354BF5A3C23BCE113997 /* Pods-HyReadExam-HyReadExamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A784BC56BDA325282764257 /* Pods-HyReadExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExamTests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExamTests/Pods-HyReadExamTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,11 +128,12 @@
 		0FCECE1E2B5FEC2E00A0C71D /* HyReadExam */ = {
 			isa = PBXGroup;
 			children = (
+				0FCECE5E2B60E57B00A0C71D /* ViewModel */,
+				0FCECE5D2B60E56D00A0C71D /* View */,
 				0FCECE582B5FFA4100A0C71D /* Manager */,
 				0FCECE552B5FF8FC00A0C71D /* Model */,
 				0FCECE1F2B5FEC2E00A0C71D /* AppDelegate.swift */,
 				0FCECE212B5FEC2E00A0C71D /* SceneDelegate.swift */,
-				0FCECE232B5FEC2E00A0C71D /* ViewController.swift */,
 				0FCECE5B2B6004F700A0C71D /* BookCollectionViewCell.swift */,
 				0FCECE252B5FEC2E00A0C71D /* Main.storyboard */,
 				0FCECE2B2B5FEC3000A0C71D /* Assets.xcassets */,
@@ -173,6 +176,22 @@
 				0FCECE592B5FFA5A00A0C71D /* APIManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		0FCECE5D2B60E56D00A0C71D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE232B5FEC2E00A0C71D /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FCECE5E2B60E57B00A0C71D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE5F2B60E5B200A0C71D /* BooksViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		91D29235776D81A1EC3AF1E6 /* Pods */ = {
@@ -462,6 +481,7 @@
 				0FCECE542B5FF6AA00A0C71D /* HTTPManager.swift in Sources */,
 				0FCECE222B5FEC2E00A0C71D /* SceneDelegate.swift in Sources */,
 				0FCECE2A2B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld in Sources */,
+				0FCECE602B60E5B200A0C71D /* BooksViewModel.swift in Sources */,
 				0FCECE5A2B5FFA5A00A0C71D /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

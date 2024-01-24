@@ -6,14 +6,18 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
 
     var collectionView: UICollectionView!
+    var viewModel = BooksViewModel()
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
+        bindViewModel()
     }
 
     private func setupCollectionView() {
@@ -40,6 +44,15 @@ class ViewController: UIViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
+    private func bindViewModel() {
+            viewModel.books
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] _ in
+                    self?.collectionView.reloadData()
+                })
+                .disposed(by: disposeBag)
+            viewModel.fetchBooks()
+        }
 }
 
 extension ViewController: UICollectionViewDataSource {
