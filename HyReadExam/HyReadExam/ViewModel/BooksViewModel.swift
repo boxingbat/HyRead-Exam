@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 import RxSwift
 
 class BooksViewModel {
@@ -19,19 +20,49 @@ class BooksViewModel {
         return booksSubject.asObservable()
     }
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     func fetchBooks() {
-        APIManager.shared.fetchBooks()
-            .subscribe(onNext: { [weak self] newBooks in
-                self?.printBooks(newBooks)
+            APIManager.shared.fetchBooks()
+                .subscribe(onNext: { [weak self] newBooks in
+                    self?.deleteAllBooksFromCoreData()
+                    self?.saveBooksToCoreData(books: newBooks)
+                    self?.booksData = newBooks
+                    self?.booksSubject.onNext(newBooks)
+                    self?.printBooks(newBooks)
+                    print(NSPersistentContainer.defaultDirectoryURL())
+                }, onError: { error in
+                    print("Error fetching books: \(error)")
+                })
+                .disposed(by: disposeBag)
+        }
+    private func deleteAllBooksFromCoreData() {
+            let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "BookEntity")
+            let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+            do {
+                try context.execute(deleteRequest)
+                try context.save()
+            } catch {
+                print("Error deleting books from Core Data: \(error)")
+            }
+        }
 
-                self?.booksData = newBooks
-
-                self?.booksSubject.onNext(newBooks)
-            }, onError: { error in
-                print("Error fetching books: \(error)")
-            })
-            .disposed(by: disposeBag)
-    }
+        private func saveBooksToCoreData(books: [Book]) {
+            for book in books {
+                let bookEntity = BookEntity(context: context)
+                bookEntity.uuid = Int64(book.uuid)
+                bookEntity.title = book.title
+                bookEntity.coverUrl = book.coverUrl
+                bookEntity.publishDate = book.publishDate
+                bookEntity.publisher = book.publisher
+                bookEntity.author = book.author
+            }
+            do {
+                try context.save()
+            } catch {
+                print("Error saving books to Core Data: \(error)")
+            }
+        }
 
     private func printBooks(_ books: [Book]) {
         books.forEach { book in

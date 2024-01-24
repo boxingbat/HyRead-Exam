@@ -21,13 +21,22 @@ class BookCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    override func prepareForReuse() {
+            super.prepareForReuse()
+            titleLabel.text = nil
+            imageView.image = nil
+        }
 
     private func setupCell() {
 
-        imageView.backgroundColor = .red
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.cornerRadius = 6
+        imageView.clipsToBounds = true
 
-        titleLabel.text = "this is for demo"
-        titleLabel.textAlignment = .center
+        titleLabel.numberOfLines = 2
+        titleLabel.lineBreakMode = .byWordWrapping
+        titleLabel.textAlignment = .left
+
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -36,22 +45,24 @@ class BookCollectionViewCell: UICollectionViewCell {
         contentView.addSubview(titleLabel)
 
         NSLayoutConstraint.activate([
+
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor),
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            imageView.heightAnchor.constraint(equalTo: imageView.widthAnchor),
 
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
             titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
+        let font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        let lineHeight = font.lineHeight
     }
+
     func configure(with book: Book) {
         titleLabel.text = book.title
         if let url = URL(string: "\(book.coverUrl)") {
-            imageView.setImage(with: url)
+            imageView.kf.setImage(with: url)
         }
     }
-
 }
