@@ -37,12 +37,15 @@ class BookCollectionViewCell: UICollectionViewCell {
     private func setupCell() {
 
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 6
+        imageView.layer.cornerRadius = 4.4
         imageView.clipsToBounds = true
+        let imageViewHeightConstraint = imageView.heightAnchor.constraint(equalToConstant: 150)
+        imageViewHeightConstraint.isActive = true
 
         titleLabel.numberOfLines = 2
         titleLabel.lineBreakMode = .byWordWrapping
         titleLabel.textAlignment = .left
+        titleLabel.font = UIFont.pingFangTCRegular(size: 14)
 
 
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -62,8 +65,6 @@ class BookCollectionViewCell: UICollectionViewCell {
             titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
         ])
-        let font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
-        let lineHeight = font.lineHeight
     }
     private func setupFavoriteButton() {
         favoriteButton.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +81,7 @@ class BookCollectionViewCell: UICollectionViewCell {
         favoriteButton.tintColor = .white
         favoriteButton.addTarget(self, action: #selector(toggleFavorite), for: .touchUpInside)
     }
+
     @objc private func toggleFavorite() {
         isFavorite = !isFavorite
         updateFavoriteButton()

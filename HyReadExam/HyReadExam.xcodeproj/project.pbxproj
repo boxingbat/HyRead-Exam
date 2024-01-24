@@ -26,6 +26,7 @@
 		0FCECE632B60EFCF00A0C71D /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE622B60EFCF00A0C71D /* LoadImage.swift */; };
 		0FCECE702B61163600A0C71D /* BookEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE6E2B61163600A0C71D /* BookEntity+CoreDataClass.swift */; };
 		0FCECE712B61163600A0C71D /* BookEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE6F2B61163600A0C71D /* BookEntity+CoreDataProperties.swift */; };
+		0FCECE732B61437C00A0C71D /* Font-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE722B61437C00A0C71D /* Font-Extention.swift */; };
 		416A3BB52CC9BD0A0066AA2D /* Pods_HyReadExam_HyReadExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC766086CA63BB2EAB1EDE1 /* Pods_HyReadExam_HyReadExamUITests.framework */; };
 		A25B66A01DDDAF4840DB36E0 /* Pods_HyReadExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +72,7 @@
 		0FCECE622B60EFCF00A0C71D /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		0FCECE6E2B61163600A0C71D /* BookEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0FCECE6F2B61163600A0C71D /* BookEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0FCECE722B61437C00A0C71D /* Font-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Extention.swift"; sourceTree = "<group>"; };
 		1267354BF5A3C23BCE113997 /* Pods-HyReadExam-HyReadExamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A784BC56BDA325282764257 /* Pods-HyReadExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExamTests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExamTests/Pods-HyReadExamTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				0FCECE622B60EFCF00A0C71D /* LoadImage.swift */,
+				0FCECE722B61437C00A0C71D /* Font-Extention.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -499,6 +502,7 @@
 				0FCECE542B5FF6AA00A0C71D /* HTTPManager.swift in Sources */,
 				0FCECE222B5FEC2E00A0C71D /* SceneDelegate.swift in Sources */,
 				0FCECE712B61163600A0C71D /* BookEntity+CoreDataProperties.swift in Sources */,
+				0FCECE732B61437C00A0C71D /* Font-Extention.swift in Sources */,
 				0FCECE2A2B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld in Sources */,
 				0FCECE602B60E5B200A0C71D /* BooksViewModel.swift in Sources */,
 				0FCECE702B61163600A0C71D /* BookEntity+CoreDataClass.swift in Sources */,
