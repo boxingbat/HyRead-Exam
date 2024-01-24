@@ -57,15 +57,6 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
         viewModel.fetchBooks()
     }
-    func storeFavorite(uuid: Int) {
-        var favorites = UserDefaults.standard.array(forKey: "favorites") as? [Int] ?? []
-        if favorites.contains(uuid) {
-            favorites.removeAll { $0 == uuid }
-        } else {
-            favorites.append(uuid)
-        }
-        UserDefaults.standard.set(favorites, forKey: "favorites")
-    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -74,18 +65,21 @@ extension ViewController: UICollectionViewDataSource {
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        // Dequeue and configure the cell
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell else {
             fatalError("Unable to dequeue BookCollectionViewCell")
         }
         let book = books[indexPath.row]
-        cell.configure(with: book)
+        let isFavorite = viewModel.isFavorite(uuid: book.uuid)
+        cell.configure(with: book, isFavorite: isFavorite)
 
-        cell.onFavoriteToggle = { uuid in
-            self.storeFavorite(uuid: uuid)
-            self.collectionView.reloadItems(at: [indexPath])
+        // Set the cell's closure to handle favorite toggle
+        cell.onFavoriteToggle = { [weak self] uuid in
+            self?.viewModel.toggleFavorite(uuid: uuid)
+            self?.collectionView.reloadItems(at: [indexPath])
         }
         return cell
-    }
+        }
 }
 
 extension ViewController: UICollectionViewDelegateFlowLayout {

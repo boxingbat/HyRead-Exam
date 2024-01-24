@@ -83,14 +83,23 @@ class BookCollectionViewCell: UICollectionViewCell {
     }
 
     @objc private func toggleFavorite() {
-        isFavorite = !isFavorite
-        updateFavoriteButton()
+        guard let uuid = bookUUID else { return }
 
-        if let uuid = bookUUID {
-            onFavoriteToggle?(uuid)
-        }
+        // Toggle the isFavorite property
+        isFavorite = !isFavorite
+
+        // Call the closure with the UUID of the book
+        onFavoriteToggle?(uuid)
+
+        // Update the UI of the favorite button
+        updateFavoriteButton()
     }
-    func configure(with book: Book) {
+
+    func configure(with book: Book, isFavorite: Bool) {
+
+        self.bookUUID = book.uuid
+        self.isFavorite = isFavorite
+
         titleLabel.text = book.title
         if let url = URL(string: "\(book.coverUrl)") {
             imageView.kf.setImage(with: url)
@@ -99,7 +108,6 @@ class BookCollectionViewCell: UICollectionViewCell {
         self.bookUUID = book.uuid
 
         let favorites = UserDefaults.standard.array(forKey: "favorites") as? [Int] ?? []
-        isFavorite = favorites.contains(book.uuid)
         updateFavoriteButton()
     }
     private func updateFavoriteButton() {
