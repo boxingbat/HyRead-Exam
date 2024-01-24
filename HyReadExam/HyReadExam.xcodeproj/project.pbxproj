@@ -15,7 +15,6 @@
 		0FCECE2A2B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE282B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld */; };
 		0FCECE2C2B5FEC3000A0C71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCECE2B2B5FEC3000A0C71D /* Assets.xcassets */; };
 		0FCECE2F2B5FEC3000A0C71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCECE2D2B5FEC3000A0C71D /* LaunchScreen.storyboard */; };
-		0FCECE3A2B5FEC3000A0C71D /* HyReadExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE392B5FEC3000A0C71D /* HyReadExamTests.swift */; };
 		0FCECE442B5FEC3000A0C71D /* HyReadExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE432B5FEC3000A0C71D /* HyReadExamUITests.swift */; };
 		0FCECE462B5FEC3000A0C71D /* HyReadExamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE452B5FEC3000A0C71D /* HyReadExamUITestsLaunchTests.swift */; };
 		0FCECE542B5FF6AA00A0C71D /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE532B5FF6AA00A0C71D /* HTTPManager.swift */; };
@@ -29,6 +28,7 @@
 		0FCECE732B61437C00A0C71D /* Font-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE722B61437C00A0C71D /* Font-Extention.swift */; };
 		0FCECE752B614FA600A0C71D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE742B614FA600A0C71D /* CoreDataManager.swift */; };
 		0FCECE772B6152E900A0C71D /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE762B6152E900A0C71D /* UserDefaultManager.swift */; };
+		0FCECE792B61714200A0C71D /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE782B61714200A0C71D /* KeyChainManager.swift */; };
 		416A3BB52CC9BD0A0066AA2D /* Pods_HyReadExam_HyReadExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC766086CA63BB2EAB1EDE1 /* Pods_HyReadExam_HyReadExamUITests.framework */; };
 		A25B66A01DDDAF4840DB36E0 /* Pods_HyReadExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */; };
 /* End PBXBuildFile section */
@@ -62,7 +62,6 @@
 		0FCECE2E2B5FEC3000A0C71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCECE302B5FEC3000A0C71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCECE352B5FEC3000A0C71D /* HyReadExamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyReadExamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FCECE392B5FEC3000A0C71D /* HyReadExamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExamTests.swift; sourceTree = "<group>"; };
 		0FCECE3F2B5FEC3000A0C71D /* HyReadExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyReadExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCECE432B5FEC3000A0C71D /* HyReadExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExamUITests.swift; sourceTree = "<group>"; };
 		0FCECE452B5FEC3000A0C71D /* HyReadExamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExamUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		0FCECE722B61437C00A0C71D /* Font-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Extention.swift"; sourceTree = "<group>"; };
 		0FCECE742B614FA600A0C71D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		0FCECE762B6152E900A0C71D /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		0FCECE782B61714200A0C71D /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
 		1267354BF5A3C23BCE113997 /* Pods-HyReadExam-HyReadExamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A784BC56BDA325282764257 /* Pods-HyReadExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExamTests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExamTests/Pods-HyReadExamTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,7 +161,6 @@
 		0FCECE382B5FEC3000A0C71D /* HyReadExamTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FCECE392B5FEC3000A0C71D /* HyReadExamTests.swift */,
 			);
 			path = HyReadExamTests;
 			sourceTree = "<group>";
@@ -190,6 +189,7 @@
 				0FCECE592B5FFA5A00A0C71D /* APIManager.swift */,
 				0FCECE742B614FA600A0C71D /* CoreDataManager.swift */,
 				0FCECE762B6152E900A0C71D /* UserDefaultManager.swift */,
+				0FCECE782B61714200A0C71D /* KeyChainManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -507,6 +507,7 @@
 				0FCECE202B5FEC2E00A0C71D /* AppDelegate.swift in Sources */,
 				0FCECE542B5FF6AA00A0C71D /* HTTPManager.swift in Sources */,
 				0FCECE222B5FEC2E00A0C71D /* SceneDelegate.swift in Sources */,
+				0FCECE792B61714200A0C71D /* KeyChainManager.swift in Sources */,
 				0FCECE712B61163600A0C71D /* BookEntity+CoreDataProperties.swift in Sources */,
 				0FCECE732B61437C00A0C71D /* Font-Extention.swift in Sources */,
 				0FCECE772B6152E900A0C71D /* UserDefaultManager.swift in Sources */,
@@ -522,7 +523,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCECE3A2B5FEC3000A0C71D /* HyReadExamTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

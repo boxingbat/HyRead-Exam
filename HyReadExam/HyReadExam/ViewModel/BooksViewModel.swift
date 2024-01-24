@@ -59,7 +59,7 @@ class BooksViewModel {
             })
             .disposed(by: disposeBag)
     }
-    
+
     func bookAt(_ index: Int) -> Book? {
         if index < booksData.count {
             return booksData[index]
