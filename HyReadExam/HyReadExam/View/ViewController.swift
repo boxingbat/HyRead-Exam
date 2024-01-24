@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var collectionView: UICollectionView!
     var viewModel = BooksViewModel()
     private let disposeBag = DisposeBag()
+    
 
     private var books: [Book] = []
 
@@ -56,6 +57,15 @@ class ViewController: UIViewController {
             .disposed(by: disposeBag)
         viewModel.fetchBooks()
     }
+    func storeFavorite(uuid: Int) {
+        var favorites = UserDefaults.standard.array(forKey: "favorites") as? [Int] ?? []
+        if favorites.contains(uuid) {
+            favorites.removeAll { $0 == uuid }
+        } else {
+            favorites.append(uuid)
+        }
+        UserDefaults.standard.set(favorites, forKey: "favorites")
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
@@ -70,6 +80,10 @@ extension ViewController: UICollectionViewDataSource {
         let book = books[indexPath.row]
         cell.configure(with: book)
 
+        cell.onFavoriteToggle = { uuid in
+            self.storeFavorite(uuid: uuid)
+            self.collectionView.reloadItems(at: [indexPath])
+        }
         return cell
     }
 }
@@ -91,5 +105,6 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 extension ViewController: UICollectionViewDelegate {
 
 }
+
 
 
