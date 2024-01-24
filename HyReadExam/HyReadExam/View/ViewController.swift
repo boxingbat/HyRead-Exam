@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     var viewModel = BooksViewModel()
     private let disposeBag = DisposeBag()
 
+    private var books: [Book] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupCollectionView()
@@ -45,25 +47,28 @@ class ViewController: UIViewController {
         ])
     }
     private func bindViewModel() {
-            viewModel.books
-                .observe(on: MainScheduler.instance)
-                .subscribe(onNext: { [weak self] _ in
-                    self?.collectionView.reloadData()
-                })
-                .disposed(by: disposeBag)
-            viewModel.fetchBooks()
-        }
+        viewModel.books
+            .observe(on: MainScheduler.instance)
+            .subscribe(onNext: { [weak self] newBooks in
+                self?.books = newBooks
+                self?.collectionView.reloadData()
+            })
+            .disposed(by: disposeBag)
+        viewModel.fetchBooks()
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return books.count
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BookCollectionViewCell.identifier, for: indexPath) as? BookCollectionViewCell else {
             fatalError("Unable to dequeue BookCollectionViewCell")
         }
+        let book = books[indexPath.row]
+        cell.configure(with: book)
 
         return cell
     }
@@ -72,13 +77,15 @@ extension ViewController: UICollectionViewDataSource {
 extension ViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let padding: CGFloat = 20 * 2
-        let minimumItemSpacing: CGFloat = 10 * (3 - 1)
-        let availableWidth = collectionView.frame.width - padding - minimumItemSpacing
-        let widthPerItem = availableWidth / 3
+            let padding: CGFloat = 20 * 2
+            let minimumItemSpacing: CGFloat = 10 * (3 - 1)
+            let availableWidth = collectionView.frame.width - padding - minimumItemSpacing
+            let widthPerItem = availableWidth / 3
 
-        return CGSize(width: widthPerItem, height: widthPerItem)
-    }
+            let heightPerItem = widthPerItem * 1.5 
+
+            return CGSize(width: widthPerItem, height: heightPerItem)
+        }
 }
 
 extension ViewController: UICollectionViewDelegate {

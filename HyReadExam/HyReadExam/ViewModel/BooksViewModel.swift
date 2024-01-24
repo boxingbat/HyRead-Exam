@@ -11,31 +11,46 @@ import RxSwift
 class BooksViewModel {
 
     private let disposeBag = DisposeBag()
+    private var booksData: [Book] = []
+
+    private let booksSubject = PublishSubject<[Book]>()
 
     var books: Observable<[Book]> {
         return booksSubject.asObservable()
     }
 
-    private let booksSubject = PublishSubject<[Book]>()
-
     func fetchBooks() {
-            APIManager.shared.fetchBooks()
-                .subscribe(onNext: { [weak self] newBooks in
-                    newBooks.forEach { book in
-                        print("""
-                              UUID: \(book.uuid)
-                              Title: \(book.title)
-                              Cover URL: \(book.coverUrl)
-                              Publish Date: \(book.publishDate)
-                              Publisher: \(book.publisher)
-                              Author: \(book.author)
-                              """)
-                    }
-                    self?.booksSubject.onNext(newBooks)
-                }, onError: { error in
-                    print("Error fetching books: \(error)")
-                })
-                .disposed(by: disposeBag)
-        }
+        APIManager.shared.fetchBooks()
+            .subscribe(onNext: { [weak self] newBooks in
+                self?.printBooks(newBooks)
 
+                self?.booksData = newBooks
+
+                self?.booksSubject.onNext(newBooks)
+            }, onError: { error in
+                print("Error fetching books: \(error)")
+            })
+            .disposed(by: disposeBag)
+    }
+
+    private func printBooks(_ books: [Book]) {
+        books.forEach { book in
+            print("""
+                  UUID: \(book.uuid)
+                  Title: \(book.title)
+                  Cover URL: \(book.coverUrl)
+                  Publish Date: \(book.publishDate)
+                  Publisher: \(book.publisher)
+                  Author: \(book.author)
+                  """)
+        }
+    }
+
+    func bookAt(_ index: Int) -> Book? {
+        if index < booksData.count {
+            return booksData[index]
+        }
+        return nil
+    }
 }
+

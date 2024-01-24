@@ -47,4 +47,11 @@ class BookCollectionViewCell: UICollectionViewCell {
             titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
+    func configure(with book: Book) {
+        titleLabel.text = book.title
+        if let url = URL(string: "\(book.coverUrl)") {
+            imageView.setImage(with: url)
+        }
+    }
+
 }
