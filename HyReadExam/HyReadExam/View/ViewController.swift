@@ -11,7 +11,7 @@ import RxSwift
 class ViewController: UIViewController {
 
     var collectionView: UICollectionView!
-    var viewModel = BooksViewModel()
+    var viewModel: BooksViewModel!
     private let disposeBag = DisposeBag()
     
 
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let booksService = BooksService()
+        viewModel = BooksViewModel(booksService: booksService)
         setupCollectionView()
         bindViewModel()
     }
