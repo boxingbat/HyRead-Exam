@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BB32A9CE709A5D770A5E771 /* Pods_HyReadExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF71B65B7AE6C11361DECF6C /* Pods_HyReadExam.framework */; };
 		0FCECE202B5FEC2E00A0C71D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE1F2B5FEC2E00A0C71D /* AppDelegate.swift */; };
 		0FCECE222B5FEC2E00A0C71D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE212B5FEC2E00A0C71D /* SceneDelegate.swift */; };
 		0FCECE242B5FEC2E00A0C71D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE232B5FEC2E00A0C71D /* ViewController.swift */; };
@@ -14,9 +15,23 @@
 		0FCECE2A2B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE282B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld */; };
 		0FCECE2C2B5FEC3000A0C71D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FCECE2B2B5FEC3000A0C71D /* Assets.xcassets */; };
 		0FCECE2F2B5FEC3000A0C71D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCECE2D2B5FEC3000A0C71D /* LaunchScreen.storyboard */; };
-		0FCECE3A2B5FEC3000A0C71D /* HyReadExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE392B5FEC3000A0C71D /* HyReadExamTests.swift */; };
 		0FCECE442B5FEC3000A0C71D /* HyReadExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE432B5FEC3000A0C71D /* HyReadExamUITests.swift */; };
 		0FCECE462B5FEC3000A0C71D /* HyReadExamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE452B5FEC3000A0C71D /* HyReadExamUITestsLaunchTests.swift */; };
+		0FCECE542B5FF6AA00A0C71D /* HTTPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE532B5FF6AA00A0C71D /* HTTPManager.swift */; };
+		0FCECE572B5FF90A00A0C71D /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE562B5FF90A00A0C71D /* BookList.swift */; };
+		0FCECE5A2B5FFA5A00A0C71D /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE592B5FFA5A00A0C71D /* APIManager.swift */; };
+		0FCECE5C2B6004F700A0C71D /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE5B2B6004F700A0C71D /* BookCollectionViewCell.swift */; };
+		0FCECE602B60E5B200A0C71D /* BooksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE5F2B60E5B200A0C71D /* BooksViewModel.swift */; };
+		0FCECE632B60EFCF00A0C71D /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE622B60EFCF00A0C71D /* LoadImage.swift */; };
+		0FCECE702B61163600A0C71D /* BookEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE6E2B61163600A0C71D /* BookEntity+CoreDataClass.swift */; };
+		0FCECE712B61163600A0C71D /* BookEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE6F2B61163600A0C71D /* BookEntity+CoreDataProperties.swift */; };
+		0FCECE732B61437C00A0C71D /* Font-Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE722B61437C00A0C71D /* Font-Extention.swift */; };
+		0FCECE752B614FA600A0C71D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE742B614FA600A0C71D /* CoreDataManager.swift */; };
+		0FCECE772B6152E900A0C71D /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE762B6152E900A0C71D /* UserDefaultManager.swift */; };
+		0FCECE792B61714200A0C71D /* KeyChainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE782B61714200A0C71D /* KeyChainManager.swift */; };
+		0FCECE7C2B6286FF00A0C71D /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCECE7B2B6286FF00A0C71D /* BooksService.swift */; };
+		416A3BB52CC9BD0A0066AA2D /* Pods_HyReadExam_HyReadExamUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAC766086CA63BB2EAB1EDE1 /* Pods_HyReadExam_HyReadExamUITests.framework */; };
+		A25B66A01DDDAF4840DB36E0 /* Pods_HyReadExamTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08267114EDDC223DAD238785 /* Pods-HyReadExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam/Pods-HyReadExam.debug.xcconfig"; sourceTree = "<group>"; };
 		0FCECE1C2B5FEC2E00A0C71D /* HyReadExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HyReadExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCECE1F2B5FEC2E00A0C71D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCECE212B5FEC2E00A0C71D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,10 +63,30 @@
 		0FCECE2E2B5FEC3000A0C71D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FCECE302B5FEC3000A0C71D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FCECE352B5FEC3000A0C71D /* HyReadExamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyReadExamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0FCECE392B5FEC3000A0C71D /* HyReadExamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExamTests.swift; sourceTree = "<group>"; };
 		0FCECE3F2B5FEC3000A0C71D /* HyReadExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HyReadExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCECE432B5FEC3000A0C71D /* HyReadExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExamUITests.swift; sourceTree = "<group>"; };
 		0FCECE452B5FEC3000A0C71D /* HyReadExamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyReadExamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0FCECE532B5FF6AA00A0C71D /* HTTPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPManager.swift; sourceTree = "<group>"; };
+		0FCECE562B5FF90A00A0C71D /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
+		0FCECE592B5FFA5A00A0C71D /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		0FCECE5B2B6004F700A0C71D /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
+		0FCECE5F2B60E5B200A0C71D /* BooksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksViewModel.swift; sourceTree = "<group>"; };
+		0FCECE622B60EFCF00A0C71D /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
+		0FCECE6E2B61163600A0C71D /* BookEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		0FCECE6F2B61163600A0C71D /* BookEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		0FCECE722B61437C00A0C71D /* Font-Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font-Extention.swift"; sourceTree = "<group>"; };
+		0FCECE742B614FA600A0C71D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		0FCECE762B6152E900A0C71D /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
+		0FCECE782B61714200A0C71D /* KeyChainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyChainManager.swift; sourceTree = "<group>"; };
+		0FCECE7B2B6286FF00A0C71D /* BooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
+		1267354BF5A3C23BCE113997 /* Pods-HyReadExam-HyReadExamUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExamTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A784BC56BDA325282764257 /* Pods-HyReadExamTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExamTests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExamTests/Pods-HyReadExamTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8F179CA801AC2061AA62702 /* Pods-HyReadExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam.release.xcconfig"; path = "Target Support Files/Pods-HyReadExam/Pods-HyReadExam.release.xcconfig"; sourceTree = "<group>"; };
+		C7DF174DF15CDD5CD289BEDD /* Pods-HyReadExamTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExamTests.debug.xcconfig"; path = "Target Support Files/Pods-HyReadExamTests/Pods-HyReadExamTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CAC766086CA63BB2EAB1EDE1 /* Pods_HyReadExam_HyReadExamUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExam_HyReadExamUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF71B65B7AE6C11361DECF6C /* Pods_HyReadExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HyReadExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBE5A112DBC9F8032B298BE4 /* Pods-HyReadExam-HyReadExamUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HyReadExam-HyReadExamUITests.release.xcconfig"; path = "Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BB32A9CE709A5D770A5E771 /* Pods_HyReadExam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25B66A01DDDAF4840DB36E0 /* Pods_HyReadExamTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416A3BB52CC9BD0A0066AA2D /* Pods_HyReadExam_HyReadExamUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +120,14 @@
 		0FCECE132B5FEC2E00A0C71D = {
 			isa = PBXGroup;
 			children = (
+				0FCECE6E2B61163600A0C71D /* BookEntity+CoreDataClass.swift */,
+				0FCECE6F2B61163600A0C71D /* BookEntity+CoreDataProperties.swift */,
 				0FCECE1E2B5FEC2E00A0C71D /* HyReadExam */,
 				0FCECE382B5FEC3000A0C71D /* HyReadExamTests */,
 				0FCECE422B5FEC3000A0C71D /* HyReadExamUITests */,
 				0FCECE1D2B5FEC2E00A0C71D /* Products */,
+				91D29235776D81A1EC3AF1E6 /* Pods */,
+				9E176B2C998DF40673D6F2A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +144,14 @@
 		0FCECE1E2B5FEC2E00A0C71D /* HyReadExam */ = {
 			isa = PBXGroup;
 			children = (
+				0FCECE7A2B6286DF00A0C71D /* Service */,
+				0FCECE612B60EFB400A0C71D /* Extension */,
+				0FCECE5E2B60E57B00A0C71D /* ViewModel */,
+				0FCECE5D2B60E56D00A0C71D /* View */,
+				0FCECE582B5FFA4100A0C71D /* Manager */,
+				0FCECE552B5FF8FC00A0C71D /* Model */,
 				0FCECE1F2B5FEC2E00A0C71D /* AppDelegate.swift */,
 				0FCECE212B5FEC2E00A0C71D /* SceneDelegate.swift */,
-				0FCECE232B5FEC2E00A0C71D /* ViewController.swift */,
 				0FCECE252B5FEC2E00A0C71D /* Main.storyboard */,
 				0FCECE2B2B5FEC3000A0C71D /* Assets.xcassets */,
 				0FCECE2D2B5FEC3000A0C71D /* LaunchScreen.storyboard */,
@@ -116,7 +164,6 @@
 		0FCECE382B5FEC3000A0C71D /* HyReadExamTests */ = {
 			isa = PBXGroup;
 			children = (
-				0FCECE392B5FEC3000A0C71D /* HyReadExamTests.swift */,
 			);
 			path = HyReadExamTests;
 			sourceTree = "<group>";
@@ -130,6 +177,83 @@
 			path = HyReadExamUITests;
 			sourceTree = "<group>";
 		};
+		0FCECE552B5FF8FC00A0C71D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE562B5FF90A00A0C71D /* BookList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FCECE582B5FFA4100A0C71D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE532B5FF6AA00A0C71D /* HTTPManager.swift */,
+				0FCECE592B5FFA5A00A0C71D /* APIManager.swift */,
+				0FCECE742B614FA600A0C71D /* CoreDataManager.swift */,
+				0FCECE762B6152E900A0C71D /* UserDefaultManager.swift */,
+				0FCECE782B61714200A0C71D /* KeyChainManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0FCECE5D2B60E56D00A0C71D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE232B5FEC2E00A0C71D /* ViewController.swift */,
+				0FCECE5B2B6004F700A0C71D /* BookCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0FCECE5E2B60E57B00A0C71D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE5F2B60E5B200A0C71D /* BooksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0FCECE612B60EFB400A0C71D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE622B60EFCF00A0C71D /* LoadImage.swift */,
+				0FCECE722B61437C00A0C71D /* Font-Extention.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0FCECE7A2B6286DF00A0C71D /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				0FCECE7B2B6286FF00A0C71D /* BooksService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		91D29235776D81A1EC3AF1E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				08267114EDDC223DAD238785 /* Pods-HyReadExam.debug.xcconfig */,
+				A8F179CA801AC2061AA62702 /* Pods-HyReadExam.release.xcconfig */,
+				1267354BF5A3C23BCE113997 /* Pods-HyReadExam-HyReadExamUITests.debug.xcconfig */,
+				FBE5A112DBC9F8032B298BE4 /* Pods-HyReadExam-HyReadExamUITests.release.xcconfig */,
+				C7DF174DF15CDD5CD289BEDD /* Pods-HyReadExamTests.debug.xcconfig */,
+				7A784BC56BDA325282764257 /* Pods-HyReadExamTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9E176B2C998DF40673D6F2A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF71B65B7AE6C11361DECF6C /* Pods_HyReadExam.framework */,
+				CAC766086CA63BB2EAB1EDE1 /* Pods_HyReadExam_HyReadExamUITests.framework */,
+				22AE3C837DE0F4C904B72A1A /* Pods_HyReadExamTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +261,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FCECE492B5FEC3000A0C71D /* Build configuration list for PBXNativeTarget "HyReadExam" */;
 			buildPhases = (
+				BF45282D7817821978FFAB8F /* [CP] Check Pods Manifest.lock */,
 				0FCECE182B5FEC2E00A0C71D /* Sources */,
 				0FCECE192B5FEC2E00A0C71D /* Frameworks */,
 				0FCECE1A2B5FEC2E00A0C71D /* Resources */,
+				90C4898F28607FC747BD2BF8 /* [CP] Embed Pods Frameworks */,
+				0FCECE522B5FF34300A0C71D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -154,6 +281,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FCECE4C2B5FEC3000A0C71D /* Build configuration list for PBXNativeTarget "HyReadExamTests" */;
 			buildPhases = (
+				11B26101F0CCAC942F67CA56 /* [CP] Check Pods Manifest.lock */,
 				0FCECE312B5FEC3000A0C71D /* Sources */,
 				0FCECE322B5FEC3000A0C71D /* Frameworks */,
 				0FCECE332B5FEC3000A0C71D /* Resources */,
@@ -172,9 +300,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0FCECE4F2B5FEC3000A0C71D /* Build configuration list for PBXNativeTarget "HyReadExamUITests" */;
 			buildPhases = (
+				4A0BD1E4C1F130EFCCC70E85 /* [CP] Check Pods Manifest.lock */,
 				0FCECE3B2B5FEC3000A0C71D /* Sources */,
 				0FCECE3C2B5FEC3000A0C71D /* Frameworks */,
 				0FCECE3D2B5FEC3000A0C71D /* Resources */,
+				F34FDD274A33C7530DC34055 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -256,15 +386,148 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0FCECE522B5FF34300A0C71D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
+		11B26101F0CCAC942F67CA56 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyReadExamTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A0BD1E4C1F130EFCCC70E85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyReadExam-HyReadExamUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90C4898F28607FC747BD2BF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam/Pods-HyReadExam-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam/Pods-HyReadExam-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HyReadExam/Pods-HyReadExam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF45282D7817821978FFAB8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HyReadExam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F34FDD274A33C7530DC34055 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HyReadExam-HyReadExamUITests/Pods-HyReadExam-HyReadExamUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0FCECE182B5FEC2E00A0C71D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FCECE572B5FF90A00A0C71D /* BookList.swift in Sources */,
+				0FCECE632B60EFCF00A0C71D /* LoadImage.swift in Sources */,
+				0FCECE5C2B6004F700A0C71D /* BookCollectionViewCell.swift in Sources */,
 				0FCECE242B5FEC2E00A0C71D /* ViewController.swift in Sources */,
 				0FCECE202B5FEC2E00A0C71D /* AppDelegate.swift in Sources */,
+				0FCECE542B5FF6AA00A0C71D /* HTTPManager.swift in Sources */,
 				0FCECE222B5FEC2E00A0C71D /* SceneDelegate.swift in Sources */,
+				0FCECE792B61714200A0C71D /* KeyChainManager.swift in Sources */,
+				0FCECE712B61163600A0C71D /* BookEntity+CoreDataProperties.swift in Sources */,
+				0FCECE732B61437C00A0C71D /* Font-Extention.swift in Sources */,
+				0FCECE772B6152E900A0C71D /* UserDefaultManager.swift in Sources */,
 				0FCECE2A2B5FEC2E00A0C71D /* HyReadExam.xcdatamodeld in Sources */,
+				0FCECE602B60E5B200A0C71D /* BooksViewModel.swift in Sources */,
+				0FCECE702B61163600A0C71D /* BookEntity+CoreDataClass.swift in Sources */,
+				0FCECE7C2B6286FF00A0C71D /* BooksService.swift in Sources */,
+				0FCECE752B614FA600A0C71D /* CoreDataManager.swift in Sources */,
+				0FCECE5A2B5FFA5A00A0C71D /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,7 +535,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FCECE3A2B5FEC3000A0C71D /* HyReadExamTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,12 +703,14 @@
 		};
 		0FCECE4A2B5FEC3000A0C71D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08267114EDDC223DAD238785 /* Pods-HyReadExam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MJ3YMWRCV5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HyReadExam/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -469,12 +733,14 @@
 		};
 		0FCECE4B2B5FEC3000A0C71D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8F179CA801AC2061AA62702 /* Pods-HyReadExam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MJ3YMWRCV5;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HyReadExam/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -497,6 +763,7 @@
 		};
 		0FCECE4D2B5FEC3000A0C71D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7DF174DF15CDD5CD289BEDD /* Pods-HyReadExamTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -517,6 +784,7 @@
 		};
 		0FCECE4E2B5FEC3000A0C71D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A784BC56BDA325282764257 /* Pods-HyReadExamTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -537,6 +805,7 @@
 		};
 		0FCECE502B5FEC3000A0C71D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1267354BF5A3C23BCE113997 /* Pods-HyReadExam-HyReadExamUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -555,6 +824,7 @@
 		};
 		0FCECE512B5FEC3000A0C71D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBE5A112DBC9F8032B298BE4 /* Pods-HyReadExam-HyReadExamUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

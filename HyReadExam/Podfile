@@ -1,0 +1,23 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '16.0'
+
+target 'HyReadExam' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for HyReadExam
+  pod 'Kingfisher'
+  pod 'SwiftLint'
+  pod 'RxSwift'
+  pod 'RxCocoa', '~> 6.0'
+  
+  target 'HyReadExamTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'HyReadExamUITests' do
+    # Pods for testing
+  end
+
+end
