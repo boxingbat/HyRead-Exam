@@ -13,6 +13,7 @@ class BooksViewModel {
 
     private let disposeBag = DisposeBag()
     private var booksData: [Book] = []
+    private let booksService: BooksService
 
     private let booksSubject = PublishSubject<[Book]>()
 
@@ -20,45 +21,30 @@ class BooksViewModel {
         return booksSubject.asObservable()
     }
 
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
+    init(booksService: BooksService) {
+            self.booksService = booksService
+        }
     func fetchBooks() {
-        APIManager.shared.fetchBooks()
-            .observe(on: MainScheduler.instance) // switch to main thread
-            .subscribe(onNext: { [weak self] newBooks in
-                // update core data on main thread
-                DispatchQueue.main.async {
-                    CoreDataManager.shared.deleteAllBooksFromCoreData { error in
-                        if let error = error {
-                            print("Error deleting books from Core Data: \(error)")
-                        } else {
-                            CoreDataManager.shared.saveBooksToCoreData(books: newBooks) { error in
-                                if let error = error {
-                                    print("Error saving books to Core Data: \(error)")
-                                }
-                            }
-                        }
-                    }
-                    self?.booksData = newBooks
+            booksService.fetchBooks()
+                .observe(on: MainScheduler.instance)
+                .subscribe(onNext: { [weak self] newBooks in
                     self?.booksSubject.onNext(newBooks)
-                }
-            }, onError: { [weak self] error in
-                print("Error fetching books: \(error)")
-                // update core data on main thread
-                DispatchQueue.main.async {
-                    CoreDataManager.shared.loadBooksFromCoreData { result in
-                        switch result {
-                        case .success(let books):
-                            self?.booksData = books
-                            self?.booksSubject.onNext(books)
-                        case .failure(let error):
-                            print("Error loading books from Core Data: \(error)")
-                        }
-                    }
-                }
-            })
-            .disposed(by: disposeBag)
-    }
+                }, onError: { [weak self] error in
+                    print("Error fetching books: \(error)")
+                    self?.loadBooksFromCoreData()
+                })
+                .disposed(by: disposeBag)
+        }
+
+        private func loadBooksFromCoreData() {
+            booksService.loadBooksFromCoreData()
+                .subscribe(onNext: { [weak self] books in
+                    self?.booksSubject.onNext(books)
+                }, onError: { error in
+                    print("Error loading books from Core Data: \(error)")
+                })
+                .disposed(by: disposeBag)
+        }
 
     func bookAt(_ index: Int) -> Book? {
         if index < booksData.count {
