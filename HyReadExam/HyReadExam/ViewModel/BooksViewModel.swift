@@ -14,11 +14,16 @@ class BooksViewModel {
     private let disposeBag = DisposeBag()
     private var booksData: [Book] = []
     private let booksService: BooksService
+    private let errorSubject = PublishSubject<String>()
 
     private let booksSubject = PublishSubject<[Book]>()
 
     var books: Observable<[Book]> {
         return booksSubject.asObservable()
+    }
+
+    var errors: Observable<String> {
+        return errorSubject.asObservable()
     }
 
     init(booksService: BooksService) {
@@ -27,11 +32,12 @@ class BooksViewModel {
     func fetchBooks() {
             booksService.fetchBooks()
                 .observe(on: MainScheduler.instance)
+                .catch { [weak self] error in
+                    self?.errorSubject.onNext("Failed to fetch books: \(error.localizedDescription)")
+                    return Observable.empty()
+                }
                 .subscribe(onNext: { [weak self] newBooks in
                     self?.booksSubject.onNext(newBooks)
-                }, onError: { [weak self] error in
-                    print("Error fetching books: \(error)")
-                    self?.loadBooksFromCoreData()
                 })
                 .disposed(by: disposeBag)
         }
@@ -45,7 +51,7 @@ class BooksViewModel {
                 })
                 .disposed(by: disposeBag)
         }
-    
+
     //toggle the favorite status of a book
     func toggleFavorite(uuid: Int) {
             var favorites = UserDefaultsManager.shared.favoriteBookUUIDs
